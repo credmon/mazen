@@ -1,0 +1,21 @@
+CC=gcc
+CFLAGS=-DNO_CURSES=1
+INCLUDES=
+LIBS=
+EXES=mazen
+OBJS=main.o signals.o init.o movement.o weapons.o mazes.o \
+	ai.o nocurses.o
+
+all: $(EXES)
+
+.SUFFIXES: .c .o
+.c.o:
+	$(CC) $(CFLAGS) -c $*.c
+	
+mazen: $(OBJS)
+	$(CC) -o mazen-nocurses $(OBJS) $(LIBS)
+
+clean:
+	rm -f core a.out $(EXES) *.o *.core
+	chmod ugo-x *.c
+	chmod ugo-x *.h
