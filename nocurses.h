@@ -1,4 +1,3 @@
-
 /*
     This is mazen, a maze oriented adventure game.
 
@@ -18,4 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
+#ifndef NOCURSES_H
+#define NOCURSES_H
 
+#endif

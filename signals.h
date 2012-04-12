@@ -17,5 +17,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
+#ifndef SIGNALS_H
+#define SIGNALS_H
+
 sig_t mazen_sigalrm();
 sig_t mazen_sigio();
+
+#endif

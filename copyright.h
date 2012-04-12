@@ -17,4 +17,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
+#ifndef COPYRIGHT_H
+#define COPYRIGHT_H
+
 void copyright_notice(int row, int col);
+
+#endif

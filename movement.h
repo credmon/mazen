@@ -17,6 +17,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
+#ifndef MOVEMENT_H
+#define MOVEMENT_H
+
 #define ROW		1
 #define COL		2
 #define UP		4
@@ -24,3 +27,5 @@
 
 void move_stairs();
 void move_to();
+
+#endif

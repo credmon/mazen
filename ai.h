@@ -17,4 +17,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
+#ifndef AI_H
+#define AI_H
+
 void ai_generator();
+
+#endif

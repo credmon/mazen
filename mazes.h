@@ -17,6 +17,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
+#ifndef MAZES_H
+
 void clear_maze();
 void goto_next_level();
 void goto_prev_level();
+
+#endif

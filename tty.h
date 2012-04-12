@@ -17,9 +17,14 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
+#ifndef TTY_H
+#define TTY_H
+
 int tty_break();
 int tty_border();
 int tty_fix();
 int tty_getchar();
 int tty_print_ingame_maze();
 int tty_print_ingame_stats();
+
+#endif
