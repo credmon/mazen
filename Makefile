@@ -5,7 +5,7 @@ STRIP_FLAGS=
 INCLUDES=
 LIBS=-lcurses
 EXES=mazen
-OBJS=main.o tty.o signals.o init.o movement.o weapons.o mazes.o ai.o
+OBJS=main.o tty.o signals.o init.o movement.o weapons.o mazes.o ai.o copyright.o
 
 all: $(EXES)
 

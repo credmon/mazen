@@ -39,6 +39,7 @@
 #include "signals.h"
 #include "tty.h"
 #include "weapons.h"
+#include "copyright.h"
 
 /* function prototypes */
 void *ingame_console();
@@ -126,9 +127,15 @@ void *ingame_console(struct MAZE *smaze, struct PLAYER *splayer)
          /*** help ***/
          case '?':
             mvprintw(smaze->rows + 3, 2, "Help:");
-            mvprintw(smaze->rows + 4, 2,
-                     "	(movement) h - left, j - down, k - up, l - right");
-            mvprintw(smaze->rows + 5, 2, "	 (weapons) p - prev, n - next");
+            mvprintw(smaze->rows + 4, 2, " (movement) h - left, j - down, k - up, l - right");
+            mvprintw(smaze->rows + 5, 2, " (weapons) p - prev, n - next");
+            mvprintw(smaze->rows + 6, 2, " (other) c - copyright notice");
+            mvprintw(smaze->rows + 7, 2, "         q - quit");
+            break;
+
+         /*** copyright notice ***/
+         case 'c':
+            copyright_notice(smaze->rows + 9, 2);
             break;
 
          /*** quit ***/
