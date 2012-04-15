@@ -23,18 +23,13 @@
 
 void ai_generator(struct MAZE *smaze)
 {
-   int init, spacing, num, i, j;
-
-   init = rand() % (smaze->rows * smaze->cols);
-   spacing = rand() % (smaze->rows * smaze->cols);
+   int i, j;
 
    for (i = 0; i < smaze->rows; i++)
    {
       for (j = 0; j < smaze->cols; j++)
       {
-         if ((num =
-              (random() % 2) * (random() % 2) * (random() % 2) * (random() %
-                                                                  2) *
+         if (((random() % 2) * (random() % 2) * (random() % 2) * (random() % 2) *
               (random() % 2)) == 1)
          {
             if (smaze->maze[i][j] == ' ')
