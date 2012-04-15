@@ -1,9 +1,9 @@
 CC=gcc
 CFLAGS=-DNO_CURSES=1
 INCLUDES=
-LIBS=
-EXES=mazen
-OBJS=main.o signals.o init.o movement.o weapons.o mazes.o \
+LIBS=-lcurses
+EXES=mazen-nocurses
+OBJS=tty.o main.o signals.o init.o movement.o weapons.o mazes.o \
 	ai.o nocurses.o
 
 all: $(EXES)
@@ -12,7 +12,7 @@ all: $(EXES)
 .c.o:
 	$(CC) $(CFLAGS) -c $*.c
 	
-mazen: $(OBJS)
+mazen-nocurses: $(OBJS)
 	$(CC) -o mazen-nocurses $(OBJS) $(LIBS)
 
 clean:

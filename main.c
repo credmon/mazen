@@ -1,4 +1,3 @@
-
 /*
     This is mazen, a maze oriented adventure game.
 
@@ -18,9 +17,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
-/* mazen.c
- * $Id: main.c,v 1.2 2006/01/04 07:28:09 credmon Exp credmon $
- */
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <sys/uio.h>

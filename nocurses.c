@@ -78,7 +78,6 @@ void *ingame_console(struct MAZE *smaze, struct PLAYER *splayer)
    fflush(stdout);
    while (read(0, input, 32) >= 0)
    {
-      printf("read: %s", input);
       switch (input[0])
       {
    /****************************/

@@ -17,7 +17,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
+#if !defined(NO_CURSES) || (NO_CURSES < 1)
 #include <curses.h>
+#endif
+
 void copyright_notice(int row, int col)
 {
    char notice0[] = "mazen  Copyright (C) 2006, 2012  Chris Redmon";
@@ -27,10 +30,19 @@ void copyright_notice(int row, int col)
    char notice4[] = "Foundation - version 3 or (at your option) any later version. For more";
    char notice5[] = "information about these matters, see the file named COPYING.";
 
+  #if defined(NO_CURSES) && (NO_CURSES > 0)
+   printf("%s\n", notice0);
+   printf("%s\n", notice1);
+   printf("%s\n", notice2);
+   printf("%s\n", notice3);
+   printf("%s\n", notice4);
+   printf("%s\n", notice5);
+  #else
    mvprintw(row+0, col, "%s", notice0);
    mvprintw(row+1, col, "%s", notice1);
    mvprintw(row+2, col, "%s", notice2);
    mvprintw(row+3, col, "%s", notice3);
    mvprintw(row+4, col, "%s", notice4);
    mvprintw(row+5, col, "%s", notice5);
+  #endif
 }
